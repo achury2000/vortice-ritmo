@@ -1,0 +1,17 @@
+VORTICE RITMO - juego 3D musical (estilo Geometry Dash dentro de un tunel)
+=========================================================================
+Doble clic en index.html (Chrome o Edge) y SUBE EL VOLUMEN / usa auriculares.
+Funciona sin internet. Si algo no carga desde archivo, usa iniciar.bat (localhost:8123).
+
+La cancion "NEON HORIZON" (140 BPM, 1:56) se genera por codigo en vivo y el nivel esta
+sincronizado al beat: cada compuerta te alcanza justo en el tiempo de la musica.
+Secciones: INTRO > BUILD > DROP > BREAK > BUILD > DROP > OUTRO.
+
+CONTROLES
+  Flechas o A/D ... girar por las paredes del tunel
+  Espacio / Flecha arriba / W ... SALTAR (para los anillos de pinchos)
+  R reiniciar | P pausa | M sonido | B quita el brillo (si va lento) | F pantalla completa
+  Movil: arrastra para girar, toca para saltar.
+
+OBJETIVO: llegar al 100% de la cancion. Orbes dorados = puntos y combo (hasta x8) y cada uno
+toca una nota. Rozar compuertas = "CERCA". Saltar pinchos = "SALTO". Modo Normal 3 vidas, Facil 5.

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>VÓRTICE RITMO — juego 3D musical</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2302020a%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2720%27 fill=%27none%27 stroke=%27%2300e5ff%27 stroke-width=%274%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2710%27 fill=%27none%27 stroke=%27%23ff2bd6%27 stroke-width=%274%27/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div class="flash" id="flash"></div><div class="vignette"></div>
+<div class="hud">
+  <div class="prog"><div class="segs" id="segs"></div><i id="pfill"></i><span id="pct">0%</span></div>
+  <div class="row">
+    <div class="h-l"><small>Puntos</small><b id="score">0</b><em id="combo"></em></div>
+    <div class="h-c"><small>Sección</small><b id="sect">INTRO</b></div>
+    <div class="h-r"><b id="lives">♥♥♥</b><small>Intento <u id="try">1</u></small></div>
+  </div>
+</div>
+<div id="toasts"></div>
+
+<section class="screen" id="s-menu">
+  <div class="box">
+    <p class="eyebrow">Juego 3D de ritmo · pista original en vivo</p>
+    <h1>VÓRTICE</h1><p class="sub">RITMO</p>
+    <p class="lead">Vuela por un túnel que baila con la música. Cada compuerta llega <b>exactamente en el beat</b>: gira para esquivar, salta los pinchos y recoge orbes para tocar la melodía. Sobrevive a toda la canción <i>NEON HORIZON</i> (1:56).</p>
+    <div class="keys"><span><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> girar</span><span><kbd>Espacio</kbd> / <kbd>↑</kbd> saltar</span><span><kbd>R</kbd> reiniciar</span><span><kbd>P</kbd> pausa</span><span>Móvil: arrastra · toca para saltar</span></div>
+    <div class="diff"><button type="button" id="d-norm" class="on">Normal · 3 vidas</button><button type="button" id="d-easy">Fácil · 5 vidas</button></div>
+    <div class="actions"><button class="btn" id="btn-play" type="button">Jugar ▶</button></div>
+    <p class="tip">Usa auriculares o sube el volumen: el juego está hecho para escucharse. Mejor progreso: <b id="m-best">0%</b></p>
+  </div>
+</section>
+<section class="screen" id="s-dead">
+  <div class="box"><p class="eyebrow">Te estrellaste</p><div class="big" id="d-pct">0%</div><p class="lead" id="d-sect"></p><p class="tip" id="d-best"></p>
+    <div class="actions"><button class="btn" id="btn-again" type="button">Reintentar ↺</button></div><p class="tip">Espacio, Enter o R reinician al instante</p></div>
+</section>
+<section class="screen" id="s-win">
+  <div class="box"><p class="eyebrow">¡Canción completada!</p><h2>NEON HORIZON</h2><div class="big grade" id="w-grade">S</div><div class="score2" id="w-score">0</div><p class="lead" id="w-detail"></p>
+    <div class="actions"><button class="btn" id="btn-again2" type="button">Jugar otra vez ↺</button></div></div>
+</section>
+<div class="bar"><button type="button" id="b-jump">⤒ Saltar</button><button type="button" id="b-snd">♪ Sonido</button><button type="button" id="b-full">⛶</button></div>
+<div class="paused" id="paused">Pausa<small>Toca para seguir</small></div>
+<script src="game.js"></script>
+</body>
+</html>
